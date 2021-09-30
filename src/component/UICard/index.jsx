@@ -1,18 +1,22 @@
 import React from 'react';
-import { View } from 'react-native';
+import { TouchableOpacity, View } from 'react-native';
+import { FontAwesome5 } from '@expo/vector-icons';
 import UIText from '../UIText';
 import styles from './styles';
 
-function UICard({ label, value = 0 }) {
+function UICard({ label, icon, background, value = '0,00' }) {
 
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={[styles.container, { backgroundColor: background }]}>
       <View>
-        <UIText size="small" style={styles.sign}>R$</UIText>
-        <UIText size="small">{value}</UIText>
+        <FontAwesome5 name={icon} style={styles.icon} />
       </View>
-      <UIText size="small" style={styles.label}>{label}</UIText>
-    </View>
+      <View>
+        <UIText color="gray" size="small" style={styles.sign}>R$</UIText>
+        <UIText size="label">{value}</UIText>
+      </View>
+      <UIText size="small" weight="bold" transform="uppercase">{label}</UIText>
+    </TouchableOpacity>
   );
 }
 
