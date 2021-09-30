@@ -16,8 +16,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   card: {
-    marginVertical: 8,
-    marginLeft: 25,
+    paddingVertical: 8,
+    paddingLeft: 25,
     backgroundColor: '#fff',
   },
   extractContainer: {

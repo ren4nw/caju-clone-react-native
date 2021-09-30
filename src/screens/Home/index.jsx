@@ -21,7 +21,6 @@ function Home() {
         <FlatList
           data={mock.cards}
           horizontal
-          contentContainerStyle={{ backgroundColor: '#fff' }}
           showsHorizontalScrollIndicator={false}
           keyExtractor={item => item.label}
           renderItem={({ item }) => <UICard label={item.label} icon={item.icon} background={item.color} />}
